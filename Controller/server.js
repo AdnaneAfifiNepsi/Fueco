@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+//Adnane
 const express = require('express');
 const fs = require('fs');
 const mustache = require('mustache-express');
@@ -65,14 +66,14 @@ function checkFileType(file, callback) {
 //----------------Configurationdu serveur----------------------
 var app = express();
 const port = 4000;
-app.use(express.static('../CSS'));
-app.use(express.static('../public'));
+app.use(express.static('./CSS'));
+app.use(express.static('./public'));
 app.use(cookieSession({
     secret: 'mot-de-passe-cookie',
 }));
 app.engine('html', mustache());
 app.set('view engine', 'html');
-app.set('views', '../Views');
+app.set('views', './Views');
 app.use(bodyParser.urlencoded({ extended: false }));
 //---------------------END-------------------------------------
 
@@ -112,7 +113,7 @@ app.get('/register', (req, res) => {
 })
 app.get('/challenges',authenticated, (req, res) => {
 
-    fs.readFile('../JsonFiles/challanges.json', function read(err, data) {
+    fs.readFile('./JsonFiles/challanges.json', function read(err, data) {
         if (err) {
             throw err;
         }
@@ -180,7 +181,7 @@ app.get('/user_profil/:name',authenticated ,(req, res) => {
             dictionary.niveau = niveau[3].niveau4;
             dictionary.subtitle=niveau[3].subtitle;
             break
-        case 5: 
+        case 5:
             model.insert_grade("5",name);
             dictionary.niveau = niveau[4].niveau5;
             dictionary.subtitle=niveau[4].subtitle;

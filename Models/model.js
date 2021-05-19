@@ -3,7 +3,7 @@
 const Sqlite = require('better-sqlite3');
 const { body, check } = require('express-validator');
 const model = require('../Models/model');
-let db = new Sqlite('../Models/db.sqlite');
+let db = new Sqlite('./Models/db.sqlite');
 const session = require('express-validator');
 
 /*-------------------* Cree un uttilisateur  *-------------------*/
