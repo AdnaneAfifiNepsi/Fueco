@@ -28,7 +28,7 @@ var count =0 ;
 
 
 const storage = multer.diskStorage({
-    destination: '../public/uploads',
+    destination: './public/uploads',
     filename: function (req, file, callback) {
         callback(null, file.fieldname + Date.now() + path.extname(file.originalname));
     }
