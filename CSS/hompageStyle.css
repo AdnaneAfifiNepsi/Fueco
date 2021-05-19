@@ -10,7 +10,7 @@
 	margin:0;
 	background:#c8c8c8;
 	/* background:url(https://hdqwalls.com/download/material-design-4k-2048x1152.jpg) fixed; */
-	 background: url("http://localhost:4000/images/backroundHomepage.jpg") fixed;
+	 background: url("https://fuecoo.herokuapp.com/images/backroundHomepage.jpg") fixed;
 	background-size: cover;
 	height: 100%!important;
 }
