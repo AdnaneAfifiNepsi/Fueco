@@ -180,7 +180,7 @@ app.get('/user_profil/:name',authenticated ,(req, res) => {
             dictionary.niveau = niveau[3].niveau4;
             dictionary.subtitle=niveau[3].subtitle;
             break
-        case 5:
+        case 5: 
             model.insert_grade("5",name);
             dictionary.niveau = niveau[4].niveau5;
             dictionary.subtitle=niveau[4].subtitle;
