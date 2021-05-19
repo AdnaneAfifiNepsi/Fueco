@@ -66,8 +66,8 @@ function checkFileType(file, callback) {
 //----------------Configurationdu serveur----------------------
 var app = express();
 const port = process.env.PORT||4000;
-app.use(express.static('./CSS'));
-app.use(express.static('./public'));
+app.use(express.static('../CSS'));
+app.use(express.static('../public'));
 app.use(cookieSession({
     secret: 'mot-de-passe-cookie',
 }));
