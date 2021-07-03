@@ -12,6 +12,8 @@ const path = require('path');
 const model = require('../Models/model.js');
 const { error } = require('console');
 const bcrypt = require('bcrypt');
+var cors = require('cors');
+
                                              // --------------------
 var info;
 var challenges;
@@ -75,6 +77,7 @@ app.engine('html', mustache());
 app.set('view engine', 'html');
 app.set('views', './Views');
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
 //---------------------END-------------------------------------
 
 //-----------------Gérer l'authentification de l'utilisateur ---------------------------------
